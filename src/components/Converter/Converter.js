@@ -43,6 +43,7 @@ class Converter extends React.Component {
                         <Col lg={4}>
                             <TextArea onChange={(value) => this.setState({inputNumbers: value})}
                                       value={inputNumbers}
+                                      placeHolder="Введите римское илиарабское число"
                             />
                         </Col>
                         <Col lg={4} className="d-flex align-items-center justify-content-center pt-md-2 pb-md-2">
@@ -59,6 +60,7 @@ class Converter extends React.Component {
                                 value={result}
                                 onChange={(value) => this.setState({result: value})}
                                 isReadOnly={true}
+                                isFocusStyle={false}
                             />
                         </Col>
                     </Row>

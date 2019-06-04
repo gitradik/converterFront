@@ -6,8 +6,8 @@ class TextArea extends React.Component {
     render() {
         return (
             <textarea
-
-                className={styles.textArea}
+                placeholder={this.props.placeHolder}
+                className={[styles.textArea, this.props.isFocusStyle || styles.nonFocusStyle].join(' ')}
                 value={this.props.value}
                 onChange={(e) => this.props.onChange(e.target.value)}
                 readOnly={this.props.isReadOnly}
@@ -19,10 +19,14 @@ class TextArea extends React.Component {
 TextArea.propTypes = {
     onChange: PropTypes.func,
     isReadOnly: PropTypes.bool,
+    placeHolder: PropTypes.string,
+    isFocusStyle: PropTypes.bool,
 };
 
 TextArea.defaultProps = {
-    isReadOnly: false
+    isReadOnly: false,
+    placeHolder: '',
+    isFocusStyle: true
 };
 
 export default TextArea;

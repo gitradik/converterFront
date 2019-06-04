@@ -18,13 +18,23 @@ textarea::-webkit-scrollbar-thumb:window-inactive
   height: 100%
   min-height: 300px
   width: 100%
-  border: none
   background-color: white
   border-radius: 4px
-  box-shadow: 0 2px 15px 0 rgba(0,0,0,.2)
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,.2)
   padding: 10px
   font-size: 24px
   font-weight: 400
   resize: none
+  transition: .25s
+  border: 2px solid transparent
+
+  &:focus
+    transition: .25s
+    border-color: #499fd8
+
+.nonFocusStyle
+
+  &:focus
+    border-color: transparent
 
 
